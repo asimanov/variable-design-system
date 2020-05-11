@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Basic -->
+    <title>Variable Design System</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Slab:300,400,700|Merriweather:400,700|Cousine:400,700&display=swap" rel="stylesheet">
+
+    <!-- Grid -->
+    <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" > -->
+
+    <!-- Design System -->
+    <link rel="stylesheet" type="text/css" media="all" href="assets/dist/variable.dev.css?v=0.0.1">
+
+    <!-- Product CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="product/dist/style.min.css?v=0.0.1">
+
+    <script src="assets/js/vds.js"></script>
+
+    <script src="https://kit.fontawesome.com/309adc147b.js" crossorigin="anonymous"></script>
+
+</html>
+
+<body class="vds-body">
+
+<!-- 
+  HTML5 Kitchen sink by @dbox 
+  Modified by @AntonSimanov 
+-->
+<main class="vds-kitchen-sink">
+
+  <div class="vds-kitchen-sink-nav">
+    <div class="vds-kitchen-sink-nav__product-logo">
+      <button type="button" name="navMenu" class="menu"><i class="fad fa-bars"></i></button>
+      <span class="title">components</span>
+    </div>
+
+    <nav class="vds-kitchen-sink-nav__container">
+      <ul>
+        <li><a href="#vds-headers" class="link-to-section">Headers</a></li>
+        <li><a href="#vds-basic-page" class="link-to-section">Basic Content</a></li>
+        <li><a href="#vds-block-quote" class="link-to-section">Block Quote</a></li>
+        <li><a href="#vds-tables" class="link-to-section">Tables</a></li>
+        <li><a href="#vds-cards" class="link-to-section">Cards</a></li>
+        <li><a href="#vds-dl" class="link-to-section">Definition List</a></li>
+        <li><a href="#vds-lists" class="link-to-section">List</a></li>
+        <li><a href="#vds-address" class="link-to-section">Address</a></li>
+        <li><a href="#vds-code" class="link-to-section">Code</a></li>
+        <li><a href="#vds-buttons" class="link-to-section">Buttons</a></li>
+        <li><a href="#vds-forms" class="link-to-section">Forms</a></li>
+        <li><a href="#vds-colors" class="link-to-section">Colors</a></li>
+        <li><a href="#vds-variables" class="link-to-section">CSS Custom Props</a></li>
+      </ul>
+    </nav>
+
+    <div class="vds-kitchen-sink-nav__logo">
+      <span>Made with 🌮 and 🍺</span>
+      <a href="https://antonsimanov.com/" target="_blank" title="Anton Simanov"><img src="https://antonsimanov.com/user/themes/vds/images/asim.svg" alt="ASIM Logo"></a>
+      <span class="p-t-1">v0.0.1</span>
+    </div>
+
+  </div>
+
+  <div class="vds-kitchen-sink-content">
+
+  <header class="vds-bg--base">
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h6 class="font-family--mono vds-text--white p-y-1 m-a-0">variable design system</h6>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="vds-bg--base-tint p-y-3">
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="font-family--mono" style="font-weight: 700;">A lightweight design system composed with CSS custom props, built with sass modules, &amp; configurable with JS.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="vds-headers" class="m-t-2">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+        <hgroup class="p-y-1">
+          <h1>h1 HTML5 Kitchen Sink</h1>
+          <h2>h2 Back in my quaint <a href="https://www.w3schools.com/tags/" title="garden">garden</a></h2>
+          <h3>h3 Jaunty <a href='#' title="zinnias">zinnias</a> vie with flaunting phlox</h3>
+          <h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4>
+          <h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5>
+          <h6>h6 Pack my box with five dozen liquor jugs.</h6>
+        </hgroup>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-basic-page">
+    <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+
+            <header>
+              <nav>
+                <ul>
+                  <li><a href="#" title="Home">Home</a></li>
+                  <li><a href="#" title="About">About</a></li>
+                  <li><a href="#" title="Contact">Contact</a></li>
+                </ul>
+              </nav>
+            </header>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+
+            <article>
+              <p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/" title="HTML5 tags">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small>        but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del>        which often gets replaced with <ins>inserted</ins> text.</p>
+              <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes
+                below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags. </p>
+            </article>
+
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+
+            <aside>
+              This is an aside.
+
+              <figure>
+                <img src="https://www.fillmurray.com/g/505/314" alt="A Picture of Bill Murray">
+                <figcaption>Fig1. A picture of Bill Murray from <a href="https://www.fillmurray.com/" title="Generate a picture of Bill Murray">fillmurray.com</a></figcaption>
+              </figure>
+            </aside>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+
+            <footer>This is footer for this section</footer>
+
+          </div>
+        </div>
+
+    </div>
+  </section>
+  
+  <hr>
+
+  <section id="vds-block-quote">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+
+          <blockquote>
+            <p>Blockquote: I quickly explained that many big jobs involve few hazards</p>
+          </blockquote>
+
+        </div>
+        
+        <div class="col-xs-12 col-md-6">
+
+          <blockquote>
+            <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
+              carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.
+              <cite class="font-size--xs">Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite>
+            </p>
+          </blockquote>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-tables" class="p-y-3">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+          <table>
+            <caption>Tables can have captions now.</caption>
+            <thead>
+              <tr>
+                <th class="p-a-1">Person</th>
+                <th class="p-a-1">Number</th>
+                <th class="p-a-1">Third Column</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-a-1">Someone Lastname</td>
+                <td class="p-a-1">900</td>
+                <td class="p-a-1">Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+              </tr>
+              <tr>
+                <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                <td class="p-a-1">1200</td>
+                <td class="p-a-1">Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Another Person</td>
+                <td class="p-a-1">1500</td>
+                <td class="p-a-1">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Last One</td>
+                <td class="p-a-1">2800</td>
+                <td class="p-a-1">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <div class="row p-t-3">
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+          <table class="vds-table">
+            <caption>Has table class</caption>
+            <thead>
+              <tr>
+                <th class="p-a-1">Person</th>
+                <th class="p-a-1">Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-a-1">Someone Lastname</td>
+                <td class="p-a-1">900</td>
+              </tr>
+              <tr>
+                <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                <td class="p-a-1">1200</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Another Person</td>
+                <td class="p-a-1">1500</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Last One</td>
+                <td class="p-a-1">2800</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+            <table class="vds-table vds-table--row-even">
+              <caption>Has table class row even</caption>
+              <thead>
+                <tr>
+                  <th class="p-a-1">Person</th>
+                  <th class="p-a-1">Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-a-1">Someone Lastname</td>
+                  <td class="p-a-1">900</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                  <td class="p-a-1">1200</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1">Another Person</td>
+                  <td class="p-a-1">1500</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1">Last One</td>
+                  <td class="p-a-1">2800</td>
+                </tr>
+              </tbody>
+            </table>
+  
+        </div>
+
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+            <table class="vds-table vds-table--row-odd">
+              <caption>Has table class row odd</caption>
+              <thead>
+                <tr>
+                  <th class="p-a-1">Person</th>
+                  <th class="p-a-1">Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-a-1">Someone Lastname</td>
+                  <td class="p-a-1">900</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                  <td class="p-a-1">1200</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1">Another Person</td>
+                  <td class="p-a-1">1500</td>
+                </tr>
+                <tr>
+                  <td class="p-a-1">Last One</td>
+                  <td class="p-a-1">2800</td>
+                </tr>
+              </tbody>
+            </table>
+  
+        </div>
+      </div>
+
+      <div class="row p-t-3">
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+          <table class="vds-table vds-table--caption-bottom">
+            <caption>Has caption on bottom</caption>
+            <thead>
+              <tr>
+                <th class="p-a-1">Person</th>
+                <th class="p-a-1">Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-a-1">Someone Lastname</td>
+                <td class="p-a-1">900</td>
+              </tr>
+              <tr>
+                <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                <td class="p-a-1">1200</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Another Person</td>
+                <td class="p-a-1">1500</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Last One</td>
+                <td class="p-a-1">2800</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+          <table class="vds-table vds-table--dark vds-table--caption-bottom vds-table--row-even">
+            <caption>Has table class row even</caption>
+            <thead>
+              <tr>
+                <th class="p-a-1">Person</th>
+                <th class="p-a-1">Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-a-1">Someone Lastname</td>
+                <td class="p-a-1">900</td>
+              </tr>
+              <tr>
+                <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                <td class="p-a-1">1200</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Another Person</td>
+                <td class="p-a-1">1500</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Last One</td>
+                <td class="p-a-1">2800</td>
+              </tr>
+            </tbody>
+          </table>
+  
+        </div>
+
+        <div class="col-xs-12 col-md-4 p-b-3">
+
+          <table class="vds-table vds-table--dark vds-table--caption-bottom vds-table--row-odd">
+            <caption>Has table class row odd</caption>
+            <thead>
+              <tr>
+                <th class="p-a-1">Person</th>
+                <th class="p-a-1">Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-a-1">Someone Lastname</td>
+                <td class="p-a-1">900</td>
+              </tr>
+              <tr>
+                <td class="p-a-1"><a href="#" title="Person Name">Person Name</a></td>
+                <td class="p-a-1">1200</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Another Person</td>
+                <td class="p-a-1">1500</td>
+              </tr>
+              <tr>
+                <td class="p-a-1">Last One</td>
+                <td class="p-a-1">2800</td>
+              </tr>
+            </tbody>
+          </table>
+  
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-cards">
+    <div class="container">
+
+      <div class="row p-y-2">
+
+        <div class="col-xs-12 col-md-4">
+
+          <div class="vds-card m-b-1">
+            <div class="vds-card__body">
+                <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="col-xs-12 col-md-4">
+        
+          <div class="vds-card m-b-1">
+            <div class="vds-card__header">
+              <span class="vds-card__title">Title 2</span>
+              <span class="vds-card__info">06/11/2019</span>
+            </div>
+      
+            <div class="vds-card__body">
+              <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="col-xs-12 col-md-4">
+        
+          <div class="vds-card m-b-1">
+            <div class="vds-card__header vds-bg--primary vds-text--white">
+              <span class="vds-card__title">Title 3</span>
+              <span class="vds-card__info">06/11/2019</span>
+            </div>
+        
+            <div class="vds-card__body">
+              <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+            </div>
+        
+            <div class="vds-card__footer">
+                <a href="#" target="_blank" class="vds-button vds-button--primary vds-button--sm m-0">Call to Action</a>
+            </div>
+          </div>
+        
+        </div>
+            
+      </div>
+
+      <div class="row p-b-2">
+
+          <div class="col-xs-12 col-md-4">
+          
+            <div class="vds-card m-b-1">
+              <img src="https://www.fillmurray.com/g/505/314" alt="A Picture of Bill Murray">
+      
+              <div class="vds-card__body">
+                <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+              </div>
+        
+            </div>
+          
+          </div>
+          
+          <div class="col-xs-12 col-md-4">
+          
+            <div class="vds-card m-b-1">
+              <img src="https://www.fillmurray.com/g/505/314" alt="A Picture of Bill Murray">
+      
+              <div class="vds-card__body">
+                <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+              </div>
+      
+              <div class="vds-card__footer justify-content-center vds-bg--base">
+                <a href="#" target="_blank" class="vds-button vds-button--outlined-light vds-button--sm m-0">Call to Action</a>
+              </div>
+        
+            </div>
+          
+          </div>
+          
+          <div class="col-xs-12 col-md-4">
+          
+            <div class="vds-card m-b-1">
+              <div class="vds-card__header vds-bg--secondary vds-text--white">
+                <span class="vds-card__title ">Title</span>
+                <span class="vds-card__info">06/11/2019</span>
+              </div>
+      
+              <img src="https://www.fillmurray.com/g/505/314" alt="A Picture of Bill Murray">
+      
+              <div class="vds-card__body">
+                <p class="no-margin">Consectetur duis ex irure aliquip aute ea occaecat sint. Cupidatat nisi laborum fugiat laborum sint labore nulla. Enim veniam occaecat ad cupidatat ipsum in ea veniam.</p>
+              </div>
+      
+              <div class="vds-card__footer justify-content-center">
+                <a href="#" target="_blank" class="vds-button vds-button--secondary vds-button--sm m-0">Call to Action</a>
+              </div>
+        
+            </div>
+          
+          </div>
+          
+        </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-dl">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+          <dl>
+            <dt>Definition List Title</dt>
+            <dd>Definition list division.</dd>
+            <dt>Kitchen Sink</dt>
+            <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd>
+            <dt>aside</dt>
+            <dd>Defines content aside from the page content</dd>
+            <dt>blockquote</dt>
+            <dd>Defines a section that is quoted from another source</dd>
+          </dl>
+        
+        </div>
+      </div>
+
+    </div>  
+  </section>
+
+  <hr>
+
+  <section id="vds-lists">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+
+          <ul>
+            <li>Unordered List item one
+              <ul>
+                <li>Nested list item
+                  <ul>
+                    <li>Level 3, item one</li>
+                    <li>Level 3, item two</li>
+                    <li>Level 3, item three</li>
+                    <li>Level 3, item four</li>
+                  </ul>
+                </li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ul>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ul>
+        
+        </div>
+
+        <div class="col-xs-12 col-md-6">  
+
+          <ol>
+            <li>List item one
+              <ol>
+                <li>List item one
+                  <ol>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                    <li>List item four</li>
+                  </ol>
+                </li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ol>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ol>
+
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-address">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+          <address>1 Infinite Loop<br>
+          Cupertino, CA 95014<br>
+          United States</address>
+        
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-code">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+    <pre>
+pre {
+  display: block;
+  padding: 7px;
+  background-color: #F5F5F5;
+  border: 1px solid #E1E1E8;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: Menlo, Monaco;
+  line-height: 160%;
+}</pre>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-buttons" class="p-y-2">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <button type="button" name="button">system button</button>  
+          <input type="button" name="input" value="Input Button">
+          <input type="submit" name="submit" value="Input Submit">
+          <input type="reset" name="reset" value="Input Reset">
+          <input type="button" name="disabled" value="Disabled Button" disabled>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <button class="vds-button block-sm">default</button>
+          <a href="#" class="vds-button block-sm">link button</a>
+          <button class="vds-button vds-button--outlined block-sm">outlined</button>
+          <button class="vds-button vds-button--outlined-light block-sm">outlined light</button>
+          <button class="vds-button vds-button--disabled block-sm" disabled>disabled</button>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <button class="vds-button vds-button--primary block-sm">primary</button>
+          <button class="vds-button vds-button--secondary block-sm">secondary</button>
+          <button class="vds-button vds-button--dark block-sm">dark</button>
+          <button class="vds-button block-sm">default</button>
+          <button class="vds-button vds-button--white block-sm">white</button>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <button class="vds-button vds-button--xl block-sm">extra large</button>
+          <button class="vds-button vds-button--lg block-sm">large</button>
+          <button class="vds-button block-sm">default</button>
+          <button class="vds-button vds-button--sm block-sm">small</button>
+          <button class="vds-button vds-button--xs block-sm">extra small</button>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <div class="vds-button-group">
+            <button class="vds-button vds-button--primary">Button</button><button class="vds-button vds-button--secondary">Button</button><button class="vds-button vds-button--dark">Button</button><button class="vds-button">Button</button><button class="vds-button vds-button--white">Button</button>
+          </div>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <div class="vds-button-group">
+            <button class="vds-button">Button</button><button class="vds-button">Button</button1><button class="vds-button">Button</button>
+          </div>
+        </div>
+
+        <div class="col-12 p-t-2">
+          <div class="vds-button-group">
+            <button class="vds-button vds-button--outlined">Button</button><button class="vds-button vds-button--outlined">Button</button><button class="vds-button vds-button--outlined">Button</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <hr>
+  
+  <section id="vds-forms">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+
+          <form>
+            <p>
+              <label for="example-input-email">Email address</label>
+              <input type="email" id="example-input-email" placeholder="Enter email">
+            </p>
+            <p>
+              <label for="example-input-password1">Number</label>
+              <input type="number" id="example-input-number" placeholder="Number">
+            </p>
+            <p>
+              <label for="example-input-password">Password</label>
+              <input type="password" id="example-input-password" placeholder="Password">
+            </p>
+            <p>
+              <label for="example-input-search">Search</label>
+              <input type="search" id="example-input-serach" placeholder="Search ..">
+            </p>
+            <p>
+              <label for="example-input-tel">Telephone number</label>
+              <input type="tel" id="example-input-tel" placeholder="Telephone number">
+            </p>
+
+            <p>
+              <label for="example-input-text">Text</label>
+              <input type="text" id="example-input-text" placeholder="Enter some text here">
+            </p>
+            <p>
+              <label for="example-input-url">Url</label>
+              <input type="url" id="example-input-url" placeholder="Enter a url here">
+            </p>
+            <p>
+              <label for="example-input-color">Color</label>
+              <input type="color" id="example-inupt-color" placeholder="#fff">
+            </p>
+            <p>
+              <label for="example-input-date">Date</label>
+              <input type="date" id="example-input-date" placeholder="date">
+            </p>
+            <p>
+              <label for="example-input-date-time">Date / Time</label>
+              <input type="datetime" id="example-input-date-time" placeholder="date / time">
+            </p>
+            <p>
+              <label for="example-input-date-time-local">Date / Time local</label>
+              <input type="datetime-local" id="example-input-date-time-local" placeholder="date / time local">
+            </p>
+            <p>
+              <label for="example-input-month">Month</label>
+              <input type="month" id="example-input-month" placeholder="Month">
+            </p>
+            <p>
+              <label for="example-input-week">Week</label>
+              <input type="week" id="example-input-week" placeholder="Week">
+            </p>
+            <p>
+              <label for="example-input-time">Time</label>
+              <input type="time" id="example-input-time" placeholder="Time">
+            </p>
+            <p>
+              <label for="example-select1">Example select</label>
+              <select id="example-select1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </p>
+            <p>
+              <label for="example-select2">Example multiple select</label>
+              <select multiple id="example-select2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </p>
+            <p>
+              <label for="example-textarea">Example textarea</label>
+              <textarea id="example-textarea" rows="3"></textarea>
+            </p>
+            <p>
+              <label for="example-input-file">File input</label>
+              <input type="file" id="example-input-file">
+            </p>
+            <fieldset>
+              <legend>I am legend</legend>
+              <div>
+                <label>
+                  <input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great
+                </label>
+              </div>
+
+              <div>
+                <label>
+                  <input type="radio" name="options-radios" id="options-radios2" value="option2"> Option two can be something else and selecting it will deselect option one
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="optionsRadios" id="options-radios3" value="option3" disabled> Option three is disabled
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>I am also legend</legend>
+              <input type="checkbox"> Check me out
+              <input type="checkbox"> Or check me out
+            </fieldset>
+            <p>
+              <button type="button" name="button">Button</button>
+              <input type="button" name="input" value="Input Button">
+              <input type="submit" name="submit" value="Submit Button">
+              <input type="reset" name="reset" value="Reset Button">
+            </p>
+          </form>
+        
+        </div>
+      </div>
+
+      <div class="row p-y-3">
+
+        <div class="vds-form-container">
+          <form action="" method="" id="form" name="form" class="validate" novalidate="" autocomplete="off">
+            
+            <!-- Inputs -->
+            <div class="row">
+      
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="formFirstName" type="text" class="vds-input" placeholder="Jonny" required>
+                  <label class="vds-label" for="formFirstName">First Name</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="formLastName" type="text" class="vds-input" placeholder="Appleseed" required>
+                  <label class="vds-label" for="formLastName">Last Name</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+      
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="formEmail" type="text" class="vds-input" placeholder="Jonny.Appleseed@company.com" required>
+                  <label class="vds-label" for="formEmail">Email</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+      
+            </div>
+            
+            <div class="row">
+      
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="formUsername" type="text" class="vds-input" placeholder="SpoonMan87" required>
+                  <label class="vds-label" for="formUsername">Username</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="password" id="formPassword" type="text" class="vds-input" placeholder="At least 8 characters" required>
+                  <label class="vds-label" for="formPassword">Password</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+      
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="password" id="formConfirmPassword" type="text" class="vds-input" placeholder="Passwords must match" required>
+                  <label class="vds-label" for="formConfirmPassword">Confirm Password</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+      
+            </div>
+      
+            <div class="row">
+              
+              <div class="col-xs-12 col-md-6 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="hasError" type="text" class="vds-input vds-error" placeholder="Oh No!" required>
+                  <label class="vds-label" for="hasError">Has Error</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+      
+              <div class="col-xs-12 col-md-6 p-y-1">
+                <div class="vds-input-container"> 
+                  <input type="text" id="formDisabled" type="text" class="vds-input" placeholder="Jane Appleseed" required disabled="disabled">
+                  <label class="vds-label" for="formDisabled">Disabled</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+      
+            </div>
+            
+            <!-- Selection -->
+            <div class="row">
+              
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-select-container"> 
+                  <select class="vds-select" id="formSelect1" required>
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <label class="vds-label" for="formSelect1">Make Your Selection</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-select-container"> 
+                  <select class="vds-select vds-error" id="formSelect2" required>
+                    <option></option>
+                    <option selected="selected">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <label class="vds-label" for="formSelect2">You Selected Wrong</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-4 p-y-1">
+                <div class="vds-select-container"> 
+                  <select class="vds-select" id="formSelect3" required disabled="disabled">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <label class="vds-label" for="formSelect3">Selection disabled</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+      
+              <div class="col-12 p-y-1">
+                <div class="vds-input-group">
+                  
+                <div class="vds-input-container"> 
+                  <input type="text" id="formSearch" type="text" class="vds-input" placeholder="..." required>
+                  <label class="vds-label" for="formSearch">Search</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              
+              <div class="vds-select-container"> 
+                  <select class="vds-select" id="formSearchSelect" required>
+                    <option></option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                  </select>
+                  <label class="vds-label" for="formSearchSelect">Refine Your Search</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+                  
+                  <button class="vds-button">Submit</button>
+                
+                </div>
+              </div>
+             
+              </div>
+             
+            
+            <!-- Textarea -->
+            <div class="row">
+              
+              <div class="col-xs-12 col-md-6 p-y-1">
+                <div class="vds-textarea-container"> 
+                  <textarea id="formTextarea" class="vds-textarea" required></textarea>
+                  <label class="vds-label" for="formTextarea">Write some stuff...</label>
+                  <span class="vds-validation-error">$error message</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-6 p-y-1">
+                <div class="vds-textarea-container"> 
+                  <textarea id="formTextarea" class="vds-textarea vds-error" required></textarea>
+                  <label class="vds-label" for="formTextarea">Write some stuff with error...</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+              
+              <div class="col-xs-12 col-md-12 p-y-1">
+                <div class="vds-textarea-container"> 
+                  <textarea id="formTextarea" class="vds-textarea" disabled="disabled" required></textarea>
+                  <label class="vds-label" for="formTextarea">You can't write anything because this is disabled...</label>
+                  <span class="vds-validation-error">You done messed up A-A-Ron!</span>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- Checkbox -->
+            <div class="row">
+              
+              <div class="col-xs-12 col-md-6">
+                <fieldset class="vds-fieldset">
+                  <legend class="vds-legend">Checkbox Fieldset</legend>
+                  <div class="vds-checkbox-container">
+                    <input class="vds-checkbox" id="truth" type="checkbox" name="historical-figures-1" value="truth" checked>
+                    <label class="vds-label" for="truth">Sojourner Truth</label>
+                  </div>
+                  <div class="vds-checkbox-container">
+                    <input class="vds-checkbox" id="douglass" type="checkbox" name="historical-figures-1" value="douglass">
+                    <label class="vds-label" for="douglass">Frederick Douglass</label>
+                  </div>
+                  <div class="vds-checkbox-container">
+                    <input class="vds-checkbox" id="washington" type="checkbox" name="historical-figures-1" value="washington">
+                    <label class="vds-label" for="washington">Booker T. Washington</label>
+                  </div>
+                  <div class="vds-checkbox-container">
+                    <input class="vds-checkbox" id="carver" type="checkbox" name="historical-figures-1" disabled>
+                    <label class="vds-label" for="carver">George Washington Carver</label>
+                  </div>
+                </fieldset>
+              </div>
+              
+              <div class="col-xs-12 col-md-6">
+                <fieldset class="vds-fieldset">
+                  <legend class="vds-legend">Radio Fieldset</legend>
+                  <div class="vds-radio-container">
+                    <input class="vds-radio" id="truth" type="radio" name="historical-figures-1" value="truth" checked>
+                    <label class="vds-label" for="truth">Sojourner Truth</label>
+                  </div>
+                  <div class="vds-radio-container">
+                    <input class="vds-radio" id="douglass" type="radio" name="historical-figures-1" value="douglass">
+                    <label class="vds-label" for="douglass">Frederick Douglass</label>
+                  </div>
+                  <div class="vds-radio-container">
+                    <input class="vds-radio" id="washington" type="radio" name="historical-figures-1" value="washington">
+                    <label class="vds-label" for="washington">Booker T. Washington</label>
+                  </div>
+                  <div class="vds-radio-container">
+                    <input class="vds-radio" id="carver" type="radio" name="historical-figures-1" disabled>
+                    <label class="vds-label" for="carver">George Washington Carver</label>
+                  </div>
+                </fieldset>
+              </div>
+              
+            </div>
+      
+            <div class="row padding-top-1">
+      
+              <div class="col-xs-12">
+                <button class="rkt-button">Submit</button>
+              </div>
+      
+            </div>
+      
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 
+  HTML5 Kitchen sink technically ends here.
+  Everything below this point is not part of it. 
+  -->
+
+  <hr>
+
+  <!-- 
+  Colors
+  -->
+  <section id="vds-colors">
+    <div class="container">
+
+      <div class="row">
+    
+        <div class="col-12">
+          <div class="row">
+            <div class="col" style="background:var(--set-color-primary-shade);"><br></div>
+            <div class="col" style="background:rgba(22,46,81,0.5);"><br></div>
+            <div class="col" style="background:rgba(22,46,81,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-primary);"><br></div>
+            <div class="col" style="background:rgba(0,94,162,0.5);"><br></div>
+            <div class="col" style="background:rgba(0,94,162,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-primary-tint);"><br></div>
+            <div class="col" style="background:rgba(115,179,231,0.5);"><br></div>
+            <div class="col" style="background:rgba(115,179,231,0.25);"><br></div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">    
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-primary-shade);"></span>
+                <span class="rkt-color-card__name">Brand Primary Shade</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-primary-shade</span>)</li>   
+                <li>rgb(<span>22,46,81</span>)</li>
+                <li>#<span>162e51</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-xs-12 col-md-4 p-y-1">  
+          <div class="rkt-color-card rkt-color-card--focus">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-primary);"></span>
+                <span class="rkt-color-card__name">Brand Primary</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-primary</span>)</li>   
+                <li>rgb(<span>0,94,162</span>)</li>
+                <li>#<span>005ea2</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-primary-tint);"></span>
+                <span class="rkt-color-card__name">Brand Primary Tint</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-primary-tint</span>)</li>   
+                <li>rgb(<span>115,179,231</span>)</li>
+                <li>#<span>73b3e7</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div> <!-- row -->
+      
+      <div class="row padding-top-1">
+        
+        <div class="col-12">
+          <div class="row">
+            <div class="col" style="background:var(--set-color-secondary-shade);"><br></div>
+            <div class="col" style="background:rgba(139,19,3,0.5);"><br></div>
+            <div class="col" style="background:rgba(139,19,3,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-secondary);"><br></div>
+            <div class="col" style="background:rgba(228,29,61,0.5);"><br></div>
+            <div class="col" style="background:rgba(228,29,61,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-secondary-tint);"><br></div>
+            <div class="col" style="background:rgba(242,147,140,0.5);"><br></div>
+            <div class="col" style="background:rgba(242,147,140,0.25);"><br></div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-secondary-shade);"></span>
+                <span class="rkt-color-card__name">Brand Secondary Shade</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-secondary-shade</span>)</li>   
+                <li>rgb(<span>139,19,3</span>)</li>
+                <li>#<span>8b1303</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-secondary);"></span>
+                <span class="rkt-color-card__name">Brand Secondary</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-secondary</span>)</li>   
+                <li>rgb(<span>228,29,61</span>)</li>
+                <li>#<span>e41d3d</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-secondary-tint);"></span>
+                <span class="rkt-color-card__name">Brand Secondary Tint</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-secondary-tint</span>)</li>   
+                <li>rgb(<span>242,147,140</span>)</li>
+                <li>#<span>f2938c</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div> <!-- row -->
+      
+      <div class="row padding-top-1">
+        
+        <div class="col-12">
+          <div class="row">
+            <div class="col" style="background:var(--set-color-base);"><br></div>
+            <div class="col" style="background:rgba(27,27,27,0.5);"><br></div>
+            <div class="col" style="background:rgba(27,27,27,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-base-light);"><br></div>
+            <div class="col" style="background:rgba(169,174,177,0.5);"><br></div>
+            <div class="col" style="background:rgba(169,174,177,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-base-tint);"><br></div>
+            <div class="col" style="background:rgba(220,222,224,0.5);"><br></div>
+            <div class="col" style="background:rgba(220,222,224,0.25);"><br></div>
+          </div>
+        </div>
+    
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-base);"></span>
+                <span class="rkt-color-card__name">Brand Base</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-base</span>)</li>   
+                <li>rgb(<span>27,27,27</span>)</li>
+                <li>#<span>1B1B1B</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-base-light);"></span>
+                <span class="rkt-color-card__name">Brand Base Light</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-base-light</span>)</li>   
+                <li>rgb(<span>169,174,177</span>)</li>
+                <li>#<span>a9aeb1</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-base-tint);"></span>
+                <span class="rkt-color-card__name">Brand Base Tint</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-base-tint</span>)</li>   
+                <li>rgb(<span>220,222,224</span>)</li>
+                <li>#<span>dcdee0</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div> <!-- row -->
+      
+      <div class="row padding-top-1">
+        
+        <div class="col-12">
+          <div class="row">
+            <div class="col" style="background:var(--set-color-form-base);"><br></div>
+            <div class="col" style="background:rgba(27,27,27,0.5);"><br></div>
+            <div class="col" style="background:rgba(27,27,27,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-form-base-light);"><br></div>
+            <div class="col" style="background:rgba(169,174,177,0.5);"><br></div>
+            <div class="col" style="background:rgba(169,174,177,0.25);"><br></div>
+            <div class="col" style="background:var(--set-color-form-base-tint);"><br></div>
+            <div class="col" style="background:rgba(220,222,224,0.5);"><br></div>
+            <div class="col" style="background:rgba(220,222,224,0.25);"><br></div>
+          </div>
+        </div>
+    
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-form-base);"></span>
+                <span class="rkt-color-card__name">Form Base</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-form-base</span>)</li>   
+                <li>rgb(<span>27,27,27</span>)</li>
+                <li>#<span>1B1B1B</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-form-base-light);"></span>
+                <span class="rkt-color-card__name">Form Base Light</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-form-base-light</span>)</li>   
+                <li>rgb(<span>169,174,177</span>)</li>
+                <li>#<span>a9aeb1</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4 p-y-1">
+          <div class="rkt-color-card">
+            <div class="rkt-color-card__info">
+              <div class="rkt-color-card__title">
+                <span class="rkt-color-card__chip" style="background:var(--set-color-form-base-tint);"></span>
+                <span class="rkt-color-card__name">Form Base Tint</span>
+              </div>
+              <ul>
+                <li>var(<span>--set-color-form-base-tint</span>)</li>   
+                <li>rgb(<span>220,222,224</span>)</li>
+                <li>#<span>dcdee0</span></li>                             
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div> <!-- row -->
+
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 
+  Variables
+  -->
+  <section id="vds-variables">
+      <div class="container">
+  
+        <div class="row">
+      
+          <div class="col-xs-12 col-md-6">
+<pre>:root {
+  --add-font-sans: "";
+  --add-font-serif: "";
+  --add-font-mono: "";
+  --set-font-size-xs: 16rem;
+  --set-font-size-sm: calc(16rem + 0.25vw);
+  --set-font-size-base: calc(16rem + 0.5vw);
+  --set-font-size-md: calc(16rem + 1vw);
+  --set-font-size-lg: calc(16rem + 1.5vw);
+  --set-font-size-xl: calc(16rem + 2vw);
+  --set-font-size-h1: calc(16rem + 3vw);
+  --set-font-size-h2: calc(16rem + 2.5vw);
+  --set-font-size-h3: calc(16rem + 2vw);
+  --set-font-size-h4: calc(16rem + 1.5vw);
+  --set-font-size-h5: calc(16rem + 1vw);
+  --set-font-size-h6: calc(16rem + 0.5vw);
+  --set-font-line-height: 1.7;
+  --set-font-weight-light: 300;
+  --set-font-weight-base: 400;
+  --set-font-weight-heavy: 700;
+  --set-font-letter-spacing: 0.5rem;
+  --set-font-serif: var(--add-font-serif),Georgia,Cambria,"Times New Roman",Times,serif;
+  --set-font-sans: var(--add-font-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --set-font-mono: var(--add-font-mono),Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --set-font-html: var(--set-font-serif);
+  --set-font-body: var(--set-font-serif);
+  --set-font-heading: var(--set-font-sans);
+  --set-font-code: var(--set-font-mono);
+  --set-color-primary: #005ea2;
+  --set-color-primary-tint: #73b3e7;
+  --set-color-primary-shade: #162e51;
+  --set-color-secondary: #e41d3d;
+  --set-color-secondary-tint: #f2938c;
+  --set-color-secondary-shade: #8b1303;
+  --set-color-base: #1b1b1b;
+  --set-color-base-light: #a9aeb1;
+  --set-color-base-tint: #dcdee0;
+  --set-color-black: #000;
+  --set-color-white: #fff;
+  --set-color-green: #2e8540;
+  --set-color-blue: #0071bc;
+  --set-color-red: #e31c3d;
+  --set-color-success: #4caf50;
+  --set-color-error: #e74c3c;
+  --set-color-info: #5bc0de;
+  --set-color-warning: #f0ad4e;
+  --set-color-body-bg: #fff;
+  --set-color-body-text: #1b1b1b;
+  --set-color-text-gray: #a9aeb1;
+  --set-color-border-color: #ddd;
+  --set-color-shadow-color: rgba(0,0,0,0.2);
+  --set-color-form-base: #1b1b1b;
+  --set-color-form-base-light: #a9aeb1;
+  --set-color-form-base-tint: #dcdee0;
+  --set-color-form-focus: #0050d8;
+  --set-color-form-focus-tint: #d9e8f6;
+  --set-color-form-error: #e31c3d;
+  --set-color-form-error-tint: #f8dfe2;
+  --set-color-form-success: #2e8540;
+  --set-color-fb: #3b59b6;
+  --set-color-tw: #4099ff;
+  --set-color-pinterest: #cb2027;
+  --set-color-skype: #12a5f4;
+  --set-color-spotify: #81b71a;
+  --set-color-instagram: #4e433c;
+  --set-color-tumblr: #2b4964;
+  --set-color-vimeo: #86b32d;
+  --set-color-soundcloud: #f76600;
+  --set-color-youtube: #f33;
+  --set-color-linkedin: #4875b4;
+  --set-color-flickr: #fe0883;
+  --set-color-foursquare: #8fd400;
+  --set-bp-min-xs: 320px;
+  --set-bp-min-sm: 480px;
+  --set-bp-min-md: 768px;
+  --set-bp-min-lg: 992px;
+  --set-bp-min-xl: 1200px;
+  --set-bp-max-xs: 319.98px;
+  --set-bp-max-sm: 479.98px;
+  --set-bp-max-md: 767.98px;
+  --set-bp-max-lg: 991.98px;
+  --set-bp-max-xl: 1199.98px;
+}</pre>
+          </div>
+
+          <div class="col-xs-12 col-md-6">
+            
+          </div>
+                  
+        </div> <!-- row -->
+  
+      </div>
+  </section>
+
+  </div>
+
+</main>
+
+</body>
+
+</html>
