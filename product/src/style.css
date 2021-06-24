@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .vds-kitchen-sink-nav__product-logo {
-    background: var(--set-color-secondary);
+    background: var(--set-color-primary);
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.vds-kitchen-sink-content:before {
+.vds-kitchen-sink-content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -160,18 +160,17 @@ body::-webkit-scrollbar-thumb {
     right: 0;
     height: 100%;
     display: block;
-    background: linear-gradient(rgba(0,94,162,.8),rgba(228,29,61,.8));
+    background: linear-gradient(rgba(228,29,61,.8), rgba(0,94,162,.8));
     opacity: 0;
     transition: all .3s ease-in-out 0s;
     z-index: 0;
-    display: none;
 }
 
 .vds-kitchen-sink-content--active {
     transform: translate(-50%);
 }
 
-.vds-kitchen-sink-content--active:before {
+.vds-kitchen-sink-content--active::before {
     opacity: 1;
     z-index: 1;
 }
