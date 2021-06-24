@@ -20,6 +20,8 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 
+/* Nav */
+
 .vds-kitchen-sink-nav {
     width: 70%;
     transform: translate(100%);
@@ -144,11 +146,17 @@ body::-webkit-scrollbar-thumb {
     font-size: var(--set-font-size-xs);
 }
 
+/* Content */
+
 .vds-kitchen-sink-content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-right: 0;
     transform: translate(0);
     transition: all 0.3s ease-in-out 0s;
+    position: relative;
+    z-index: 1;
 }
 
 .vds-kitchen-sink-content::before {
@@ -159,11 +167,12 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     height: 100%;
-    display: block;
     background: linear-gradient(rgba(228,29,61,.8), rgba(0,94,162,.8));
-    opacity: 0;
+    opacity: 1;
     transition: all .3s ease-in-out 0s;
-    z-index: 0;
+    display: block;
+    z-index: -1;
+    opacity: 0;
 }
 
 .vds-kitchen-sink-content--active {
@@ -172,7 +181,7 @@ body::-webkit-scrollbar-thumb {
 
 .vds-kitchen-sink-content--active::before {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
 }
 
 .no-scroll {

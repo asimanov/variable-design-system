@@ -38,7 +38,6 @@ function productNav() {
     });
     
     document.querySelector('.vds-kitchen-sink-content').addEventListener('click', function(e) {
-        e.preventDefault();
 
         [].map.call(document.querySelectorAll('.vds-kitchen-sink-nav'), function(el) {
             el.classList.remove('vds-kitchen-sink-nav--active');
