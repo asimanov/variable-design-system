@@ -101,6 +101,27 @@
       position: relative;
     }
   }
+
+  &--hr {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .vds-card__header {
+      min-height: auto;
+      flex-direction: column;
+      border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+    }
+    
+    .vds-card__footer {
+      min-height: auto;
+      flex-direction: column;
+      border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+
+      a {
+        display: block;
+      }
+    }
+  }
 }
 
 // Card List
