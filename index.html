@@ -16,7 +16,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" > -->
 
     <!-- Design System -->
-    <link rel="stylesheet" type="text/css" media="all" href="assets/dist/variable.dev.css?v=0.0.2">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/dist/variable.min.css?v=0.0.2">
 
     <!-- Product CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="product/dist/style.min.css?v=0.0.1">
@@ -28,6 +28,9 @@
 </html>
 
 <body class="vds-body">
+
+<!-- Browser Warning -->
+<div class="vds-warning-browser"><i class="fad fa-exclamation-triangle"></i> <span>You are using an outdated browser. Our site may not work optimally or at all in older browsers.</span></div>
 
 <!-- 
   HTML5 Kitchen sink by @dbox 
@@ -48,6 +51,7 @@
         <li><a href="#vds-block-quote" class="link-to-section">Block Quote</a></li>
         <li><a href="#vds-tables" class="link-to-section">Tables</a></li>
         <li><a href="#vds-cards" class="link-to-section">Cards</a></li>
+        <li><a href="#vds-messages" class="link-to-section">Messages</a></li>
         <li><a href="#vds-dl" class="link-to-section">Definition List</a></li>
         <li><a href="#vds-lists" class="link-to-section">List</a></li>
         <li><a href="#vds-address" class="link-to-section">Address</a></li>
@@ -55,6 +59,7 @@
         <li><a href="#vds-buttons" class="link-to-section">Buttons</a></li>
         <li><a href="#vds-forms" class="link-to-section">Forms</a></li>
         <li><a href="#vds-colors" class="link-to-section">Colors</a></li>
+        <li><a href="#vds-utility" class="link-to-section">Utility</a></li>
         <li><a href="#vds-variables" class="link-to-section">CSS Custom Props</a></li>
       </ul>
     </nav>
@@ -73,7 +78,7 @@
     <div class="container">
         <div class="row">
           <div class="col-12">
-            <h6 class="font-family--mono vds-text--white p-y-1 m-a-0">Variable Design System <span class="vds-text--base-tint">0.0.2</span></h6>
+            <h6 class="font-family--mono vds-text--white p-y-1 m-a-0">--variable-design-system <span class="vds-text--base-tint"><sup>0.0.2</sup></span></h6>
           </div>
         </div>
     </div>
@@ -105,8 +110,8 @@
           <div class="col-xs-12 col-md-4">
             <div class="vds-card m-b-1">
               <div class="vds-card__body">
-                <p style="text-align: center;"><i class="fab fa-bootstrap fa-3x vds-text--primary p-b-1"></i></p> 
-                <h6 class="no-margin" style="text-align: center;">Use any grid for structural foundation</h6>
+                <p class="text-align--center"><i class="fab fa-bootstrap fa-3x vds-text--primary p-b-1"></i></p> 
+                <h6 class="no-margin text-align--center">Use any grid for structural foundation</h6>
               </div>
             </div>
           </div>
@@ -114,8 +119,8 @@
           <div class="col-xs-12 col-md-4">
             <div class="vds-card m-b-1">
               <div class="vds-card__body">
-                <p style="text-align: center;"><i class="fab fa-sass fa-3x vds-text--secondary p-b-1"></i></p> 
-                <h6 class="no-margin" style="text-align: center;">Add VDS as base Design System</h6>
+                <p class="text-align--center"><i class="fab fa-sass fa-3x vds-text--secondary p-b-1"></i></p> 
+                <h6 class="no-margin text-align--center">Add VDS as base Design System</h6>
               </div>
             </div>
           </div>
@@ -123,9 +128,22 @@
           <div class="col-xs-12 col-md-4">
             <div class="vds-card m-b-1">
               <div class="vds-card__body">
-                <p style="text-align: center;"><i class="fab fa-js-square fa-3x vds-text--base p-b-1"></i></p> 
-                <h6 class="no-margin" style="text-align: center;">Modify CSS custom properties with JS</h6>
+                <p class="text-align--center"><i class="fab fa-js-square fa-3x vds-text--base p-b-1"></i></p> 
+                <h6 class="no-margin text-align--center">Modify CSS custom properties with JS</h6>
               </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="vds-bg--primary-shade p-y-3">
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="display-flex justify-content-center">
+              <a href="https://github.com/asimanov/variable-design-system/releases" class="vds-button vds-button--secondary block-sm vds-button--no-icon" title="Variable Design System Release" target="_blank"><i class="fad fa-rocket-launch"></i> Download</a>
+              <a href="https://github.com/asimanov/variable-design-system/" class="vds-button vds-button--base block-sm vds-button--no-icon" title="Variable Design System Release" target="_blank"><i class="fab fa-github"></i> Github</a>
             </div>
           </div>
         </div>
@@ -751,6 +769,23 @@
           
           </div>
         </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="vds-messages">
+    <div class="container">
+
+      <div class="row p-y-2">
+
+        <div class="col-12">
+          <span>This message only shows when css grid is not supported:</span>
+          <div class="vds-warning-browser display-block"><i class="fad fa-exclamation-triangle"></i> <span>You are using an outdated browser. Our site may not work optimally or at all in older browsers.</span></div>
+        </div>
+
+      </div>
 
     </div>
   </section>
@@ -1616,6 +1651,173 @@ pre {
 
   <hr>
 
+  <section id="vds-utility">
+    <div class="container">
+
+      <div class="row p-y-2">
+
+        <div class="col-12">
+          <h3>Basic Utilities</h3>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Display</h6>
+          <ul>
+            <li><code>.display-block</code></li>
+            <li><code>.display-inline-block</code></li>
+            <li><code>.display-inline</code></li>
+            <li><code>.display-flex</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Display block by breakpoints</h6>
+          <ul>
+            <li><code>.display-block-xs</code></li>
+            <li><code>.display-block-sm</code></li>
+            <li><code>.display-block-md</code></li>
+            <li><code>.display-block-lg</code></li>
+            <li><code>.display-block-xl</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Background Colors</h6>
+          <ul>
+            <li><code class="vds-bg--primary vds-text--white">.vds-bg--primary</code></li>
+            <li><code class="vds-bg--primary-tint">.vds-bg--primary-tint</code></li>
+            <li><code class="vds-bg--primary-shade vds-text--white">.vds-bg--primary-shade</code></li>
+            <li><code class="vds-bg--secondary vds-text--white">.vds-bg--secondary</code></li>
+            <li><code class="vds-bg--secondary-tint">.vds-bg--secondary-tint</code></li>
+            <li><code class="vds-bg--secondary-shade vds-text--white">.vds-bg--secondary-shade</code></li>
+            <li><code class="vds-bg--base vds-text--white">.vds-bg--base</code></li>
+            <li><code class="vds-bg--base-light">.vds-bg--base-light</code></li>
+            <li><code class="vds-bg--base-tint">.vds-bg--base-tint</code></li>
+            <li><code class="vds-bg--black vds-text--white">.vds-bg--black</code></li>
+            <li><code class="vds-bg--white">.vds-bg--white</code></li>
+            <li><code class="vds-bg--green vds-text--white">.vds-bg--green</code></li>
+            <li><code class="vds-bg--blue vds-text--white">.vds-bg--blue</code></li>
+            <li><code class="vds-bg--red vds-text--white">.vds-bg--red</code></li>
+            <li><code class="vds-bg--success vds-text--white">.vds-bg--success</code></li>
+            <li><code class="vds-bg--error vds-text--white">.vds-bg--error</code></li>
+            <li><code class="vds-bg--info vds-text--white">.vds-bg--info</code></li>
+            <li><code class="vds-bg--warning vds-text--white">.vds-bg--warning</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Text Colors</h6>
+          <ul>
+            <li><code class="vds-text--primary">.vds-text--primary</code></li>
+            <li><code class="vds-text--primary-tint">.vds-text--primary-tint</code></li>
+            <li><code class="vds-text--primary-shade">.vds-text--primary-shade</code></li>
+            <li><code class="vds-text--secondary">.vds-text--secondary</code></li>
+            <li><code class="vds-text--secondary-tint">.vds-text--secondary-tint</code></li>
+            <li><code class="vds-text--secondary-shade">.vds-text--secondary-shade</code></li>
+            <li><code class="vds-text--base">.vds-text--base</code></li>
+            <li><code class="vds-text--base-light vds-bg--base">.vds-text--base-light</code></li>
+            <li><code class="vds-text--base-tint vds-bg--base">.vds-text--base-tint</code></li>
+            <li><code class="vds-text--black">.vds-text--black</code></li>
+            <li><code class="vds-text--white vds-bg--base">.vds-text--white</code></li>
+            <li><code class="vds-text--green">.vds-text--green</code></li>
+            <li><code class="vds-text--blue">.vds-text--blue</code></li>
+            <li><code class="vds-text--red">.vds-text--red</code></li>
+            <li><code class="vds-text--success">.vds-text--success</code></li>
+            <li><code class="vds-text--error">.vds-text--error</code></li>
+            <li><code class="vds-text--info">.vds-text--info</code></li>
+            <li><code class="vds-text--warning">.vds-text--warning</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Padding</h6>
+          <span class="display-block m-b-1">$spacer: 16rem * #</span>
+          <span class="display-block m-b-1">#: 1 to 10</span>
+          <ul>
+            <li><code>.p-a-#</code> - all</li>
+            <li><code>.p-t-#</code> - top</li>
+            <li><code>.p-b-#</code> - bottom</li>
+            <li><code>.p-l-#</code> - left</li>
+            <li><code>.p-r-#</code> - right</li>
+            <li><code>.p-x-#</code> - left and right</li>
+            <li><code>.p-y-#</code> - top and bottom</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Margin</h6>
+          <span class="display-block m-b-1">$spacer: 16rem * #</span>
+          <span class="display-block m-b-1">#: 1 to 10</span>
+          <ul>
+            <li><code>.m-a-#</code> - all</li>
+            <li><code>.m-t-#</code> - top</li>
+            <li><code>.m-b-#</code> - bottom</li>
+            <li><code>.m-l-#</code> - left</li>
+            <li><code>.m-r-#</code> - right</li>
+            <li><code>.m-x-#</code> - left and right</li>
+            <li><code>.m-y-#</code> - top and bottom</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Padding Reset</h6>
+          <ul>
+            <li><code>.p-a-0</code> - all</li>
+            <li><code>.p-t-0</code> - top</li>
+            <li><code>.p-b-0</code> - bottom</li>
+            <li><code>.p-l-0</code> - left</li>
+            <li><code>.p-r-0</code> - right</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Margin Reset</h6>
+          <ul>
+            <li><code>.m-a-0</code> - all</li>
+            <li><code>.m-t-0</code> - top</li>
+            <li><code>.m-b-0</code> - bottom</li>
+            <li><code>.m-l-0</code> - left</li>
+            <li><code>.m-r-0</code> - right</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Font Family</h6>
+          <ul>
+            <li><code class="font-family--serif">.font-family--serif</code></li>
+            <li><code class="font-family--sans">.font-family--sans</code></li>
+            <li><code class="font-family--mono">.font-family--mono</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Font Sizes</h6>
+          <ul>
+            <li><code class="font-size--xs">font-size--xs</code></li>
+            <li><code class="font-size--sm">font-size--sm</code></li>
+            <li><code class="font-size--base">font-size--base</code></li>
+            <li><code class="font-size--md">font-size--md</code></li>
+            <li><code class="font-size--lg">font-size--lg</code></li>
+            <li><code class="font-size--xl">font-size--xl</code></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-6 p-b-1">
+          <h6>Text Align</h6>
+          <ul>
+            <li><code class="text-align--left display-block">text-align--left</code></li>
+            <li><code class="text-align--center display-block">text-align--center</code></li>
+            <li><code class="text-align--right display-block">text-align--right</code></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
   <!-- 
   Variables
   -->
@@ -1624,7 +1826,7 @@ pre {
   
         <div class="row">
       
-          <div class="col-xs-12 col-md-6">
+          <div class="col-12">
 <pre>:root {
   --add-font-sans: "";
   --add-font-serif: "";
@@ -1708,10 +1910,6 @@ pre {
   --set-bp-max-lg: 991.98px;
   --set-bp-max-xl: 1199.98px;
 }</pre>
-          </div>
-
-          <div class="col-xs-12 col-md-6">
-            
           </div>
                   
         </div> <!-- row -->

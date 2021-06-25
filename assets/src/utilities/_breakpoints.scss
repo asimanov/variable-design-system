@@ -4,7 +4,7 @@
 
 // Display block by viewport size
 // 
-.block-xs {
+.display-block-xs {
   @include config.breakpoint-max(xs) {
     display: block;
     margin-left: 0;
@@ -13,7 +13,7 @@
   }
 }
 
-.block-sm {
+.display-block-sm {
   @include config.breakpoint-max(sm) {
     display: block;
     margin-left: 0;
@@ -22,7 +22,7 @@
   }
 }
 
-.block-md {
+.display-block-md {
   @include config.breakpoint-max(md) {
     display: block;
     margin-left: 0;
@@ -31,7 +31,7 @@
   }
 }
 
-.block-lg {
+.display-block-lg {
   @include config.breakpoint-max(lg) {
     display: block;
     margin-left: 0;
@@ -40,7 +40,7 @@
   }
 }
 
-.block-xl {
+.display-block-xl {
   @include config.breakpoint-max(xl) {
     display: block;
     margin-left: 0;

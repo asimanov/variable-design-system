@@ -9,10 +9,8 @@ a.vds-button {
   --btn-color: var(--set-color-base);
   --btn-bg: var(--set-color-base-tint);
   --btn-border: 1px solid var(--set-color-base-light);
-  // Set in this component
   --btn-border-radius: 0.2em;
   --btn-border-width: 1rem 1rem calc(.2em + .5rem) 1rem;
-  // --btn-padding: 0.5em 1em;
   --btn-padding: calc(0.5em + 0.2vw) calc(1em + 0.2vw);
   --btn-margin: 0.5em;
 
@@ -25,6 +23,11 @@ a.vds-button {
   border-width: var(--btn-border-width);
   padding: var(--btn-padding);
   margin: var(--btn-margin);
+
+  // remove auto link type icon
+  &::after {
+    display: none;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -164,11 +167,3 @@ a.vds-button {
     }
   }
 }
-
-// a.vds-button {
-//   @extend button;
-//   @extend .vds-button;
-//   line-height: initial;
-//   display: inline-block;
-//   border-color: var(--btn-border);
-// }
