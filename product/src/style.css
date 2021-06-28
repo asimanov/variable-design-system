@@ -14,6 +14,12 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--set-color-base-tint)
 }
 
+/* formaly in the main asset, preserved for the demo and removed from production on the main */
+main {
+    overflow-x: hidden;
+}
+/* --- */
+
 .vds-kitchen-sink {
     display: flex;
     flex-direction: row;
