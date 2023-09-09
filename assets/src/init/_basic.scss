@@ -1,14 +1,11 @@
 /////////////// [BASIC] ///////////////
 
 @use '../config';
-
-@include config.global-box-sizing;
  
 body {
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
-  @include config.clearfix;
 }
  
 p {
