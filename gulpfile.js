@@ -1,33 +1,29 @@
 'use strict';
 
-var gulp = require("gulp"),
-    sass = require("gulp-dart-sass"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    sourcemaps = require("gulp-sourcemaps"),
-    rename = require("gulp-rename"),
-    plumber = require("gulp-plumber"),
-    notify = require("gulp-notify"),
-    size = require("gulp-size"),
-    Fiber = require('fibers'),
-    browserSync = require("browser-sync").create();
-
-    // sass.compiler = require('dart-sass');
+const gulp = require("gulp");
+const sass = require("gulp-dart-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const sourcemaps = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const plumber = require("gulp-plumber");
+const notify = require("gulp-notify");
+const size = require("gulp-size");
+const browserSync = require("browser-sync").create();
 
 // Error handling
-// 
-var onError = function (err) {
-	notify.onError({
-		title: "Gulp",
-		subtitle: "You done messed up, AA-Ron!",
-		message: "Error: <%= error.message %>",
-		sound: "Beep"
-	})(err);
-	this.emit('end');
+const onError = function (err) {
+    notify.onError({
+        title: "Gulp",
+        subtitle: "You done messed up, AA-Ron!",
+        message: "Error: <%= error.message %>",
+        sound: "Beep"
+    })(err);
+    this.emit('end');
 };
 
-var paths = {
+const paths = {
     styles: {
         src: "assets/src/**/*.scss",
         dest: "assets/dist",
@@ -37,13 +33,12 @@ var paths = {
 };
 
 // Dev
-// 
 function dev() {
     return gulp
         .src(paths.styles.src)
         .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
-        .pipe(sass({fiber: Fiber}))
+        .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write())
         .pipe(rename({
@@ -56,12 +51,11 @@ function dev() {
 }
 
 // Production
-// 
 function build() {
     return gulp
         .src(paths.styles.src)
         .pipe(plumber({errorHandler: onError}))
-        .pipe(sass({fiber: Fiber}))
+        .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(rename({
             basename: 'variable',
@@ -73,7 +67,6 @@ function build() {
 }
 
 // Product CSS
-// 
 function productBuild() {
     return gulp
         .src(paths.styles.productSrc)
@@ -89,13 +82,11 @@ function productBuild() {
 }
 
 // A simple task to reload the page
-// 
 function reload() {
     browserSync.reload();
 }
 
 // Initialize browserSync
-// 
 function watch() {
     browserSync.init({
         server: {
@@ -112,16 +103,13 @@ function watch() {
 }
 
 // Expose the tasks
-// 
 exports.watch = watch;
 exports.dev = dev;
 exports.build = build;
 exports.product = productBuild;
 
 // Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
-// 
-var build = gulp.parallel(dev, productBuild, watch);
-  
-// Run `gulp` from cli
-// 
-gulp.task('default', build);
+const buildTasks = gulp.parallel(dev, productBuild, watch);
+
+// Run `gulp` from CLI
+gulp.task('default', buildTasks);
